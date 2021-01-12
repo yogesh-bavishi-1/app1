@@ -13,12 +13,14 @@ class AddStudentController extends Controller
 
     public function index()
     {
-
-         return view('add_student');
+		return view('add_student');
     }
 
     public function store(){
-    		
-    }
+    	return view('home');
+
+	}
 
 }
+
+?>

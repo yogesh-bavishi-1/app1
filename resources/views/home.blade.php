@@ -14,12 +14,15 @@
                         </div>
                     @endif
 
-                    <div>@csrf
-                        <form method="get" action="{{ route('add') }}">
+                    List is here
+
+                    
+                    <form method="get" action="{{ route('add') }}">
+                        @csrf
                             <input type="hidden" name="temp" value="temp">
                             <button type="submit" class="green">Add</button>
-                        </form>
-                    </div>
+                    </form>
+                    
 
                 </div>
             </div>

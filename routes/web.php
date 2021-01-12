@@ -19,5 +19,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/add','AddStudentController@store')->name('add');
-Route::get('/add', 'AddStudentController@index');
+Route::get('/add', 'AddStudentController@index')->name('add');
+Route::post('/add','AddStudentController@store');

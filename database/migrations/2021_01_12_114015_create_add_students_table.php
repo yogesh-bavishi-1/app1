@@ -13,9 +13,12 @@ class CreateAddStudentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('add_students', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::create('students', function (Blueprint $table) {
+            $table->bigIncrements('enroll')->autoIncrement();
+            $table->string('name');
+            $table->string('email');
+            $table->integer('sem');
+            $table->integer('phone');
         });
     }
 
@@ -26,6 +29,6 @@ class CreateAddStudentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('add_students');
+        Schema::dropIfExists('students');
     }
 }
