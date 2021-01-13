@@ -14,7 +14,14 @@
                         </div>
                     @endif
 
-                    List is here
+                    List is here 
+
+
+                    @foreach($students as $student)
+                        <li class="list-group-item" >
+                                {{ $student['name'] }}
+                        </li>
+                    @endforeach
 
                     
                     <form method="get" action="{{ route('add') }}">
