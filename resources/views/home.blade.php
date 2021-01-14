@@ -19,11 +19,20 @@
 
                     @foreach($students as $student)
                         <li class="list-group-item" >
-                                {{ $student['name'] }}
+                                {{ $student['name'] }} - {{$student['email']}} - {{$student['semester']}} - {{$student['phone']}}
+
+                                <form class="float-right" method="get" action="{{route('edit',$student->id)}}">
+                                    @csrf
+                                    <button type="submit">Edit</button>
+                                </form>
+                                <form class="float-right" method="get" action="{{route('delete',$student->id)}}">
+                                    @csrf
+                                    <button type="submit">Delete</button>
+                                </form>
                         </li>
                     @endforeach
 
-                    
+                    <br/>
                     <form method="get" action="{{ route('add') }}">
                         @csrf
                             <input type="hidden" name="temp" value="temp">

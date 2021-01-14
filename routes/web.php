@@ -19,5 +19,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/add','StudentController@index')->name('add');
 Route::post('/add','StudentController@store');
+
+
+Route::get('/delete/{id}','DeleteController@index')->name('delete');//for confirmation
+Route::post('/delete/{id}','DeleteController@remove');//actual deletion
+
+Route::get('/edit/{id}','EditController@index')->name('edit');
+Route::post('/edit/{id}','EditController@update');

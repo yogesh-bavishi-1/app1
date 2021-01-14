@@ -6,9 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
- 	protected $table = 'student';
-
- 	protected $fillable=[
- 		'name','email','semester','phone',
- 	];   
+    public $timestamps=false;
 }
